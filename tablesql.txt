@@ -1,0 +1,19 @@
+CREATE DATABASE controlefuncionarios
+
+CREATE TABLE `funcionario` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `cpf` varchar(15) NOT NULL,
+  `data_admissao` varchar(15) DEFAULT NULL,
+  `salario` double DEFAULT NULL,
+  `tipo_contrato` varchar(20) DEFAULT NULL,
+  `tipo_funcionario` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cpf` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `departamento` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
